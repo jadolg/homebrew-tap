@@ -5,20 +5,20 @@
 class JwtDecode < Formula
   desc "Simple tool to decode JSON Web token."
   homepage "https://github.com/jadolg/jwt-decode"
-  version "2.1.1"
+  version "2.1.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.1/jwt-decode_Darwin_x86_64.tar.gz"
-      sha256 "8a9a9e879d1960679985e4dbb0af0eb85fda754e482aa53e1da4a8cd33843011"
+      url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.2/jwt-decode_Darwin_x86_64.tar.gz"
+      sha256 "d73ce468b914f631de3a6681a569af00833d27c2387026a2d261f14bedbde4ef"
 
       def install
         bin.install "jwt-decode"
       end
     end
     on_arm do
-      url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.1/jwt-decode_Darwin_arm64.tar.gz"
-      sha256 "870d5e2d0a9722b45aa0e7bbb8af1e7051840156361d4f9052924def08384410"
+      url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.2/jwt-decode_Darwin_arm64.tar.gz"
+      sha256 "58e645e7821bb44d49f15255e05caba95c0e9ddc4ba24f16676266cbdd19deed"
 
       def install
         bin.install "jwt-decode"
@@ -29,8 +29,8 @@ class JwtDecode < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.1/jwt-decode_Linux_x86_64.tar.gz"
-        sha256 "244d5787c009406bf54b2851eae3f0819427659b3a934d308eb9c9361b3f7c27"
+        url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.2/jwt-decode_Linux_x86_64.tar.gz"
+        sha256 "35329ea478163b84d1407e24f5ea300b531c30dc3a690f406df520455a09f3cd"
 
         def install
           bin.install "jwt-decode"
@@ -39,8 +39,8 @@ class JwtDecode < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.1/jwt-decode_Linux_arm64.tar.gz"
-        sha256 "23139f10ca3bb0f394a61eb3126baae644f5b7c66141189b53daed7c69e84731"
+        url "https://github.com/jadolg/jwt-decode/releases/download/v2.1.2/jwt-decode_Linux_arm64.tar.gz"
+        sha256 "f175c87b78f174f266ba42bdb1b7ee2496af749f6c385469bde28d705ca78c5f"
 
         def install
           bin.install "jwt-decode"
