@@ -9,8 +9,8 @@ class Szero < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_Darwin_x86_64.tar.gz"
-      sha256 "0a59aa76828396f1e8056619d6f52c658d36edbc8a6f7fd222a4f045e48fb66f"
+      url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_1.6.4_darwin_amd64.tar.gz"
+      sha256 "496ab8cfc692ae9f5dd86494b48c26088fb899b3410c75d4f409b7b228aef7fb"
 
       def install
         bin.install "szero"
@@ -20,8 +20,8 @@ class Szero < Formula
       end
     end
     on_arm do
-      url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_Darwin_arm64.tar.gz"
-      sha256 "2b929b39576a43a3a4ca0023db7393927fe3d9bebb1a6e825c05107da39b0d3f"
+      url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_1.6.4_darwin_arm64.tar.gz"
+      sha256 "a62ad60decf4d6d02420f65573b231b76c39fae6ff6bdcf1c3f8abdc90aa41e6"
 
       def install
         bin.install "szero"
@@ -35,8 +35,8 @@ class Szero < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_Linux_x86_64.tar.gz"
-        sha256 "590a607b10109e7109432f10cd5559d9710f715c0117c8f983b4765690ff1131"
+        url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_1.6.4_linux_amd64.tar.gz"
+        sha256 "763cfde0b48088ab1dffc463fa8ed79879b439fb94d5dab154f024eade9816e3"
 
         def install
           bin.install "szero"
@@ -48,8 +48,8 @@ class Szero < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_Linux_arm64.tar.gz"
-        sha256 "503c655d8f5862e4f7472db912d2c75c1476d569a8fb676b84c0dbd8c9f2477e"
+        url "https://github.com/jadolg/szero/releases/download/v1.6.4/szero_1.6.4_linux_arm64.tar.gz"
+        sha256 "34c7e9ea5c4a0fd582fe9f86501434e1ce5997d4c5d8cc87e50e02066e7700b9"
 
         def install
           bin.install "szero"
