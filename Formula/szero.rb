@@ -5,12 +5,12 @@
 class Szero < Formula
   desc "Temporarily scale down/up/restart all deployments in a namespace."
   homepage "https://github.com/jadolg/szero"
-  version "1.9.2"
+  version "1.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jadolg/szero/releases/download/v1.9.2/szero_1.9.2_darwin_amd64.tar.gz"
-      sha256 "c60905f14cf25cfe3e767ff7162f2a1be3bf9bad2ba4a99c10d65cf430288352"
+      url "https://github.com/jadolg/szero/releases/download/v1.10.0/szero_1.10.0_darwin_amd64.tar.gz"
+      sha256 "3e9bf35912e093a2aee86e7ea6f58b8620a4d1b9d4abe6a5134d1eb6877d4d0e"
 
       def install
         bin.install "szero"
@@ -21,8 +21,8 @@ class Szero < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jadolg/szero/releases/download/v1.9.2/szero_1.9.2_darwin_arm64.tar.gz"
-      sha256 "01518e5c2b5e078de744efd4f9ed30c1d91e1c611b680a47f7029289e5737204"
+      url "https://github.com/jadolg/szero/releases/download/v1.10.0/szero_1.10.0_darwin_arm64.tar.gz"
+      sha256 "0698834b21252678994f4ae97c1b1f2d6b725e738adacfb0143652b05ae0f281"
 
       def install
         bin.install "szero"
@@ -35,32 +35,26 @@ class Szero < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jadolg/szero/releases/download/v1.9.2/szero_1.9.2_linux_amd64.tar.gz"
-        sha256 "310c730985d992beaa070bbc7db571970d9b7a85606a6583fa5773e0c0b981e0"
-
-        def install
-          bin.install "szero"
-          bash_completion.install "completions/szero.bash" => "szero"
-          zsh_completion.install "completions/szero.zsh" => "_szero"
-          fish_completion.install "completions/szero.fish"
-          man1.install "man/szero.1.gz"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/jadolg/szero/releases/download/v1.10.0/szero_1.10.0_linux_amd64.tar.gz"
+      sha256 "9f0f220216da3a0d4a61d3f8e63df3ac5f7a86ea97d60814e60b9aa49ce95643"
+      def install
+        bin.install "szero"
+        bash_completion.install "completions/szero.bash" => "szero"
+        zsh_completion.install "completions/szero.zsh" => "_szero"
+        fish_completion.install "completions/szero.fish"
+        man1.install "man/szero.1.gz"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jadolg/szero/releases/download/v1.9.2/szero_1.9.2_linux_arm64.tar.gz"
-        sha256 "79c89c5a6a905e5ab0d55aa2b65dc62c4327c11a90a7cd45be1ee5ed48308800"
-
-        def install
-          bin.install "szero"
-          bash_completion.install "completions/szero.bash" => "szero"
-          zsh_completion.install "completions/szero.zsh" => "_szero"
-          fish_completion.install "completions/szero.fish"
-          man1.install "man/szero.1.gz"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/jadolg/szero/releases/download/v1.10.0/szero_1.10.0_linux_arm64.tar.gz"
+      sha256 "f988322edd72a5a14b1d49071f833d6bddbcc5cbcfc8949a077abc27dd97a21e"
+      def install
+        bin.install "szero"
+        bash_completion.install "completions/szero.bash" => "szero"
+        zsh_completion.install "completions/szero.zsh" => "_szero"
+        fish_completion.install "completions/szero.fish"
+        man1.install "man/szero.1.gz"
       end
     end
   end
