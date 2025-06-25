@@ -5,12 +5,12 @@
 class Szero < Formula
   desc "Temporarily scale down/up/restart all deployments in a namespace."
   homepage "https://github.com/jadolg/szero"
-  version "1.11.0"
+  version "1.12.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jadolg/szero/releases/download/v1.11.0/szero_darwin_amd64.tar.gz"
-      sha256 "6f7f39e411c05e610841d3452b9a71c6aa7f3338ec587d06c15c9ebef8387181"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.0/szero_darwin_amd64.tar.gz"
+      sha256 "4adddbf4d5f17b4a72a731d0f9c6491c2a366ef5a26e00a98666c2fb2cc519f3"
 
       def install
         bin.install "szero"
@@ -21,8 +21,8 @@ class Szero < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jadolg/szero/releases/download/v1.11.0/szero_darwin_arm64.tar.gz"
-      sha256 "7c87234ec25b930c806cf7148922a304b0ef5bf2a3c8c0109b932f609f6848ee"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.0/szero_darwin_arm64.tar.gz"
+      sha256 "8defc7e92869fdb910fcd0b4173a95510b655ce915b023ec051258cc8fc47ab8"
 
       def install
         bin.install "szero"
@@ -36,8 +36,8 @@ class Szero < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jadolg/szero/releases/download/v1.11.0/szero_linux_amd64.tar.gz"
-      sha256 "715c4bd3167e0db20df4d63b6a65cd0c33519338656415e55d6fe18759502dfe"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.0/szero_linux_amd64.tar.gz"
+      sha256 "0ee2a29a8f42126122a42920d6ae0eb5da2c6ae7e9056c0daf01b28a66ee7c5e"
       def install
         bin.install "szero"
         bash_completion.install "completions/szero.bash" => "szero"
@@ -47,8 +47,8 @@ class Szero < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jadolg/szero/releases/download/v1.11.0/szero_linux_arm64.tar.gz"
-      sha256 "28ca17e0cf87f84315db859daf6132d37671de347c6f3a1070b18f7913c86108"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.0/szero_linux_arm64.tar.gz"
+      sha256 "e56788accd012c52161ba44c0c69d45740422d019f677cd05b9fe756da9d4899"
       def install
         bin.install "szero"
         bash_completion.install "completions/szero.bash" => "szero"
