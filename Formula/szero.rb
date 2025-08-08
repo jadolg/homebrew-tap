@@ -6,6 +6,7 @@ class Szero < Formula
   desc "Temporarily scale down all deployments, statefulsets, and daemonsets in a namespace."
   homepage "https://github.com/jadolg/szero"
   version "1.12.1"
+  disable! date: "2025-08-08", because: "the cask should be used now instead", replacement_cask: "szero"
 
   on_macos do
     if Hardware::CPU.intel?
