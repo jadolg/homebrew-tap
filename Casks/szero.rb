@@ -2,7 +2,7 @@
 cask "szero" do
   desc "Temporarily scale down all deployments, statefulsets, and daemonsets in a namespace."
   homepage "https://github.com/jadolg/szero"
-  version "1.12.3"
+  version "1.2.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,23 +16,23 @@ cask "szero" do
 
   on_macos do
     on_intel do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.3/szero_darwin_amd64.tar.gz"
-      sha256 "42545540fa191609f5370cf063c8785f47c341e8776fae4b2bd2fd6a74cd9142"
+      url "https://github.com/jadolg/szero/releases/download/v1.2.4/szero_darwin_amd64.tar.gz"
+      sha256 "4ab040f91863c1c1309f7fff508fca2a0bf1de1c7ad62333267781393e2359b5"
     end
     on_arm do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.3/szero_darwin_arm64.tar.gz"
-      sha256 "4e2fff365430af44d16eac624c7193bdd76ef078ed03bc6adbb35346f7d3e6a6"
+      url "https://github.com/jadolg/szero/releases/download/v1.2.4/szero_darwin_arm64.tar.gz"
+      sha256 "a7c6d586847dac4f3b7ecdbabd7352da409a923e909cd3895ea91ff6d48b80a1"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.3/szero_linux_amd64.tar.gz"
-      sha256 "6d380f72b458e20ad0a88cf9dbd03240c5791c220c6aa27a6984c0294848c34e"
+      url "https://github.com/jadolg/szero/releases/download/v1.2.4/szero_linux_amd64.tar.gz"
+      sha256 "4d059af29d112f20bc95ad2eae7033be2a69acac9b01301dc675edae4406ca2a"
     end
     on_arm do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.3/szero_linux_arm64.tar.gz"
-      sha256 "3c37e1b0b3da8c7dd68bac5cd8738543932d03d3f1c3a20efc266c79c70b4adb"
+      url "https://github.com/jadolg/szero/releases/download/v1.2.4/szero_linux_arm64.tar.gz"
+      sha256 "2597be12b86e4f2665c35590d26fb1ee3e62cbad8cb97089b6c434a777bc0138"
     end
   end
 
@@ -41,7 +41,7 @@ cask "szero" do
     ]
 
   postflight do
-    on_macos do
+    if OS.mac?
       # Remove quarantine attribute if it exists
       if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
         system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/szero"]
