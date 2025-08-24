@@ -2,7 +2,7 @@
 cask "szero" do
   desc "Temporarily scale down all deployments, statefulsets, and daemonsets in a namespace."
   homepage "https://github.com/jadolg/szero"
-  version "1.12.4"
+  version "1.12.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,23 +16,23 @@ cask "szero" do
 
   on_macos do
     on_intel do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.4/szero_darwin_amd64.tar.gz"
-      sha256 "5ce1548d4734ce1b01c97df00448832a79efd454173a4794054c98aaeaa5b36d"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.5/szero_darwin_amd64.tar.gz"
+      sha256 "2a657e99f828f0d3c0fc5faf9f8ff19100787af40cddb7bcd71dffa0af32a23b"
     end
     on_arm do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.4/szero_darwin_arm64.tar.gz"
-      sha256 "4bc8b609a8ab031acc6bca90402196375e5f0843e273b79977884408a98aaccb"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.5/szero_darwin_arm64.tar.gz"
+      sha256 "d639b5b190af4b06995e0479ae4de46e73af229789cd2fcb0de7a93ac433b1f5"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.4/szero_linux_amd64.tar.gz"
-      sha256 "85c0408f54b845ab1a53f84f2274d12a33cab66f163f8cc8f3f0966fbc7555d0"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.5/szero_linux_amd64.tar.gz"
+      sha256 "2226a67fd84d78522ab2bae117d6965b49bba15b92b62cdb3c20228cd3601ee4"
     end
     on_arm do
-      url "https://github.com/jadolg/szero/releases/download/v1.12.4/szero_linux_arm64.tar.gz"
-      sha256 "78e8763d6e0dffd66a65ff2bc82ce6de929982629986f180bfbf3a52274ba3ba"
+      url "https://github.com/jadolg/szero/releases/download/v1.12.5/szero_linux_arm64.tar.gz"
+      sha256 "f5fb336e88be6c01f5b64ce3a1f5f6b29f7899b9c4e2b0e4fc12f6a4d9cd78b1"
     end
   end
 
